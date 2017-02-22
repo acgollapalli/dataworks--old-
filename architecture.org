@@ -1,0 +1,28 @@
+Architecture for Dataworks
+* What we want to achieve
+Dataworks is meant to be a way for normal people to be able to build their basic financial models, while also being usable for high powered analyses.
+Dataworks is not meant to be used alongside Excel. It is meant to replace it.
+* Key Capabilities
+Custom Formulae
+Data Visualization
+Programmatic Data Analysis with NO LIMITS
+* Use Cases
+** Financial Models
+** Regression Analyses
+** Linear Programming/ Polynomial Optimization
+** Sorting/ Visualizing Data
+** Building Dashboards
+** Analyses from Multiple Data Sources
+** Cleaning up Data, Manually or Programmatically
+* Basic Structure
+** Comparison with Excel
+The structure of Excel is the range. Within the range there is the value. All other operations of Excel can be derived from the Range. Sum, Sumproduct, Average, Std. Dev. Pivot Charts, and the Almighty Pivot Table can be derived from the Range.
+** The Map
+The Structure of Dataworks is built on the map. It is granular. We can have a collection of maps. If users  wish to think in terms of  Tabular Relations, they may do so by collections of maps with the same keywords, or they may define collections based on only the presence of certain keywords. They may define schemas.
+** Relationships
+We do not use N-dimensional cubes, we use webs. Meaning that every relationship has a rule or a lookup table. The rule is done by keyword or combination of keywords, or lack of keywords, or any two values of any set of keywords, or any other rule the user may desire to create.
+In order for this to make sense, we have to define a relationship. 
+*** The Traditional Relationship
+The traditional relationship is when a row in one table is treated as being part of the same row as another row in another table. This means that you can join the two in a query or create a calculated column in one table which references a value in another table, or filter a table by values in a related table. 
+*** The Dynamic Relationship
+The Dynamic Relationship means that values can be assigned by program, both by the Database Administrator, and by the user at the construction of their own data model. Essentially, the unrelated maps or collections of maps are fed into a user defined function which adds a keyword for which the value is the ID of the related map.
