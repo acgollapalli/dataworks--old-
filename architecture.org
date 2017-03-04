@@ -1,4 +1,4 @@
-Architecture for Dataworks
+Architecture for Dataworks 
 * What we want to achieve
 Dataworks is meant to be a way for normal people to be able to build their basic financial models, while also being usable for high powered analyses.
 Dataworks is not meant to be used alongside Excel. It is meant to replace it.
@@ -26,3 +26,19 @@ In order for this to make sense, we have to define a relationship.
 The traditional relationship is when a row in one table is treated as being part of the same row as another row in another table. This means that you can join the two in a query or create a calculated column in one table which references a value in another table, or filter a table by values in a related table. 
 *** The Dynamic Relationship
 The Dynamic Relationship means that values can be assigned by program, both by the Database Administrator, and by the user at the construction of their own data model. Essentially, the unrelated maps or collections of maps are fed into a user defined function which adds a keyword for which the value is the ID of the related map.
+** It is accessed on the browser and can be used without a keyboard.
+Our product, Dataworks, can be accessed on the cloud through the browser. User actions will be translated into clojure code and sent over to the data processing server on the cloud. The cloud server will run the computations and then send the processed data over the connection. If the browser cannot handle all the data, our application will send some metadata and data randomly sampled based on each characteristic in each record. 
+** Dataworks is a program that writes programs
+We are essentially creating a graphical user interface which the user can use to construct a program to be sent offsite and executed on another machine.
+We will also allow users to construct their programs directly, compile them, test them on a subset of the data, or on all of it. This means users will have to be able to access a REPL on the browser.
+* Our Market
+Our market is business analysts. 
+As of 2014 there are 758,000 business analysts.
+This means that if our product costs $60 a year to use, then that market is $45.5 million in size.
+If our product costs more than that, then obviously much more can be made.
+* Business Model
+Since we run in the browser, or on a desktop client (which would basically be an electron packaged version of our website), we would charge for access to our cloud service. Each user (or collection of users) buys a certain amount of storage and cores. 
+** What Users get
+An account on our website.
+A certain amount of storage for their datamodels.
+A certain amount of computational allocation for their calculations.
